@@ -5,7 +5,10 @@ from the terminal while not echoing the input back (similar to `getpasswd`). The
 package uses syscalls to avoid any dependence on cgo, and is therefore
 compatible with cross-compiling.
 
-[![GoDoc](https://godoc.org/github.com/bgentry/speakeasy?status.png)][godoc]
+This fork add support for `QuietAsk()`, which has no prompt and will not print a
+carriage return after reading the password.
+
+[![GoDoc](https://godoc.org/github.com/Taek42/speakeasy?status.png)][godoc]
 
 ## Unicode
 

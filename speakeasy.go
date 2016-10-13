@@ -14,6 +14,12 @@ func Ask(prompt string) (password string, err error) {
 	return FAsk(os.Stdout, prompt)
 }
 
+// Same as the Ask function, but no prompt and no carriage return at the end.
+func QuietAsk() (password string, err error) {
+	password, err = getPassword()
+	return
+}
+
 // Same as the Ask function, except it is possible to specify the file to write
 // the prompt to.
 func FAsk(wr io.Writer, prompt string) (password string, err error) {
